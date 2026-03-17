@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Portfolio</title>
+    <link rel="stylesheet" href="portfoliostyle.css">
+</head>
+<body>
+    <header>
+         <h1>SANTHOSH MEHER</h1>
+         <h4>Aspiring Filmmaker & Web Developer</h4>
+         <button id="colbtn">change color</button>
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <section>
+        <h3>ABOUT:</h3> 
+        <p>I am a student at Andhra University...</p> 
+
+         <h3>SKILLS:</h3>
+         <ul>
+            <li>Video Editing</li>
+            <li>Filmmaking</li>
+            <li>Web Development</li></li>
+         </ul>
+              
+         <h3>CONTACT:</h3>
+         <input type="text" id="username">
+         <button id="btn">submit</button>
+    </section>
+
+   
+
+    <script>
+        let username=document.getElementById("username");
+        let btn=document.getElementById("btn");
+        let colbtn=document.getElementById("colbtn");
+        let background;
+        let backgroundColor;
+        
+        btn.addEventListener("click",function(){
+            let name=username.value;
+
+            let para=document.createElement("p");
+            para.innerText="welcome " + name;
+
+            document.body.appendChild(para);
+        });
+
+        colbtn.addEventListener("click",function(){
+            
+            backgroundColor="#"+Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor=backgroundColor;
+        });
+
+
+    </script>
+     <footer>
+       <p>Copyright &copy; 2023</p>
+    </footer>
+</body>
+</html>
